@@ -1,0 +1,186 @@
+/* Camada institucional UFFS — adaptação visual para publicação estática no IIS */
+:root{
+  --uffs-green:#008037;
+  --uffs-green-dark:#00652c;
+  --uffs-green-darker:#065228;
+  --uffs-green-soft:#edf7f0;
+  --uffs-text:#16362a;
+  --uffs-muted:#62756e;
+  --uffs-border:#d8e2dc;
+  --uffs-page:#f4f6f5;
+  --uffs-shadow:0 22px 55px rgba(7,32,19,.08);
+}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--uffs-page)!important;
+  color:var(--uffs-text)!important;
+  font-family:"Fira Sans","Segoe UI",Arial,sans-serif!important;
+}
+/* Governo federal */
+#{background:#7f7f7f!important;}
+/* Header principal */
+.min-h-screen > header:first-of-type{
+  position:relative!important;
+  top:auto!important;
+  background:linear-gradient(120deg,var(--uffs-green) 0 42%,#0b833d 42% 54%,var(--uffs-green-darker) 54% 100%)!important;
+  border-bottom:0!important;
+  box-shadow:none!important;
+  padding:18px 16px!important;
+  color:#fff!important;
+  backdrop-filter:none!important;
+}
+.min-h-screen > header:first-of-type .max-w-6xl{
+  max-width:1280px!important;
+}
+.min-h-screen > header:first-of-type img{
+  width:272px!important;
+  height:auto!important;
+  max-height:78px!important;
+  object-fit:contain!important;
+}
+.min-h-screen > header:first-of-type h1,
+.min-h-screen > header:first-of-type p,
+.min-h-screen > header:first-of-type .dark\:text-white,
+.min-h-screen > header:first-of-type .text-slate-800,
+.min-h-screen > header:first-of-type .text-slate-400,
+.min-h-screen > header:first-of-type .text-slate-500{
+  color:#fff!important;
+}
+.min-h-screen > header:first-of-type h1{
+  font-size:1.55rem!important;
+  letter-spacing:-.02em!important;
+}
+.min-h-screen > header:first-of-type p{
+  opacity:.92!important;
+}
+.min-h-screen > header:first-of-type .h-8.w-px{
+  background:rgba(255,255,255,.32)!important;
+}
+/* Botões do topo */
+.min-h-screen > header:first-of-type button,
+.min-h-screen > header:first-of-type label{
+  border-color:rgba(255,255,255,.25)!important;
+  background:rgba(0,0,0,.12)!important;
+  color:#fff!important;
+  box-shadow:none!important;
+}
+.min-h-screen > header:first-of-type button:hover,
+.min-h-screen > header:first-of-type label:hover{
+  background:rgba(0,0,0,.22)!important;
+}
+.min-h-screen > header:first-of-type .bg-amber-100,
+.min-h-screen > header:first-of-type .dark\:bg-amber-900\/30{
+  background:rgba(255,255,255,.14)!important;
+  color:#fff!important;
+}
+/* Área hero */
+main.max-w-6xl{
+  max-width:1280px!important;
+  margin-top:0!important;
+  padding-top:36px!important;
+}
+main.max-w-6xl > div:first-child > header:first-child{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(90deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.97) 55%,rgba(232,241,236,.92) 100%),radial-gradient(circle at right center,rgba(0,128,55,.18),transparent 32%);
+  border:1px solid #e2e9e4;
+  border-radius:24px;
+  padding:34px;
+  box-shadow:var(--uffs-shadow);
+}
+main.max-w-6xl > div:first-child > header:first-child::after{
+  content:'RSC-PCCTAE';
+  position:absolute;
+  right:-8px;
+  top:18px;
+  font-size:clamp(42px,7vw,110px);
+  font-weight:800;
+  line-height:1;
+  letter-spacing:.02em;
+  color:rgba(0,82,40,.055);
+  pointer-events:none;
+}
+main h2 span,
+.text-brand-600,
+.dark\:text-brand-400,
+.text-brand-700,
+.text-brand-800,
+.text-brand-900\/80{
+  color:var(--uffs-green)!important;
+}
+.bg-brand-600,
+button.bg-brand-600{
+  background:var(--uffs-green)!important;
+  border-color:var(--uffs-green)!important;
+}
+.border-brand-600{border-color:var(--uffs-green)!important;}
+.ring-brand-600\/30{--tw-ring-color:rgba(0,128,55,.30)!important;}
+.bg-brand-50,
+.dark\:bg-brand-950\/20{
+  background:var(--uffs-green-soft)!important;
+}
+.border-brand-200,
+.border-brand-200\/80,
+.dark\:border-brand-900\/40,
+.dark\:border-brand-900\/50{
+  border-color:#d0e6d7!important;
+}
+/* Cards/formulários */
+.rounded-2xl,.rounded-xl{border-radius:22px!important;}
+.shadow-sm,.shadow-xl,.shadow-md{box-shadow:var(--uffs-shadow)!important;}
+input,select,textarea{
+  color:var(--uffs-text)!important;
+}
+.focus\:ring-brand-500:focus,
+.focus\:border-brand-500:focus{
+  --tw-ring-color:rgba(0,128,55,.28)!important;
+  border-color:var(--uffs-green)!important;
+}
+/* Barra fixa inferior */
+.fixed.bottom-4{
+  border-color:#d0e6d7!important;
+  background:rgba(237,247,240,.96)!important;
+  box-shadow:0 18px 42px rgba(7,32,19,.16)!important;
+}
+/* Rodapé no padrão visual do Boletim/UFFS */
+footer.mt-24{
+  background:var(--uffs-green)!important;
+  border-top:0!important;
+  color:#fff!important;
+  padding:34px 0!important;
+}
+footer.mt-24 .max-w-6xl{max-width:1280px!important;}
+footer.mt-24 img{
+  filter:none!important;
+  opacity:1!important;
+  width:260px!important;
+  height:auto!important;
+}
+footer.mt-24,
+footer.mt-24 p,
+footer.mt-24 span,
+footer.mt-24 a,
+footer.mt-24 .text-slate-400,
+footer.mt-24 .text-slate-500,
+footer.mt-24 .text-slate-600,
+footer.mt-24 .dark\:text-slate-300,
+footer.mt-24 .dark\:text-slate-400{
+  color:#fff!important;
+}
+footer.mt-24 a{text-decoration:underline;text-underline-offset:3px;}
+footer.mt-24 .h-6.w-px{background:rgba(255,255,255,.35)!important;}
+/* Dark mode: mantém usabilidade, mas preserva identidade institucional */
+.dark body,
+.dark .min-h-screen{background:#0f1b16!important;}
+.dark main.max-w-6xl > div:first-child > header:first-child{
+  background:linear-gradient(90deg,rgba(15,27,22,.98),rgba(18,44,31,.96));
+  border-color:rgba(255,255,255,.1);
+}
+.dark main.max-w-6xl > div:first-child > header:first-child::after{color:rgba(255,255,255,.04);}
+@media (max-width: 768px){
+  .min-h-screen > header:first-of-type .max-w-6xl{align-items:flex-start!important;}
+  .min-h-screen > header:first-of-type img{width:220px!important;}
+  main.max-w-6xl > div:first-child > header:first-child{padding:24px;}
+}
+
+.font-ufes{font-family:"Fira Sans","Segoe UI",Arial,sans-serif!important;}

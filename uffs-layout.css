@@ -184,3 +184,18 @@ footer.mt-24 .h-6.w-px{background:rgba(255,255,255,.35)!important;}
 }
 
 .font-ufes{font-family:"Fira Sans","Segoe UI",Arial,sans-serif!important;}
+
+/* Descrição breve do anexo (obrigatória) */
+input[id^="anexo-titulo-"]{
+  background:#f7fbf8!important;
+}
+input[id^="anexo-titulo-"]:focus{
+  border-color:var(--uffs-green)!important;
+  box-shadow:0 0 0 3px rgba(0,128,55,.18)!important;
+}
+label[for^="anexo-titulo-"]{
+  color:var(--uffs-green)!important;
+  text-transform:none!important;
+  letter-spacing:0!important;
+  font-size:11px!important;
+}

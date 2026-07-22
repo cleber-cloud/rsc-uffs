@@ -3,3 +3,10 @@ node_modules/
 package-lock.json
 _test_pdf_conv.js
 
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example

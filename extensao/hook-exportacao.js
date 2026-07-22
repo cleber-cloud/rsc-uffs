@@ -154,12 +154,14 @@
       state.documents || []
     );
     if (faltando.length) {
-      const amostra = faltando
-        .slice(0, 3)
-        .map((f) => `${f.criterionId}: ${f.name}`)
-        .join("; ");
+      const n = faltando.length;
+      const itens = Array.from(new Set(faltando.map((f) => f.criterionId))).sort((a, b) =>
+        String(a).localeCompare(String(b), "pt-BR", { numeric: true })
+      );
+      const lista = itens.join(", ");
+      const palavra = n === 1 ? "anexo" : "anexos";
       throw new Error(
-        `Há ${faltando.length} anexo(s) sem descrição breve. Preencha "Descreva brevemente o anexo" (${amostra}).`
+        `Há ${n} ${palavra} sem descrição breve. Vá até os itens ${lista}, clique em Gerenciar Anexos e adicione as descrições.`
       );
     }
 

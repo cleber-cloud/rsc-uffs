@@ -24,21 +24,4 @@
 <script src="./extensao/pdf-fontes.js"></script>
 <script src="./extensao/anexos-consolidados.js"></script>
 <script src="./extensao/hook-exportacao.js"></script>
-
-<script>
-/* Corrige apenas logo se cair fora de /rsc-uffs/ (sem alterar design) */
-(function(){
-  var OK="/rsc-uffs/logo-ufes.png";
-  function fix(){
-    document.querySelectorAll("img").forEach(function(img){
-      var s=img.getAttribute("src")||"";
-      if(s==="/rsc-uffs/logo-ufes.png"||s==="./logo-ufes.png"||s==="logo-ufes.png"||s==="https://cleber-cloud.github.io/logo-ufes.png"){
-        img.setAttribute("src",OK); img.removeAttribute("srcset");
-      }
-    });
-  }
-  fix();
-  new MutationObserver(fix).observe(document.documentElement,{subtree:true,childList:true,attributes:true,attributeFilter:["src","srcset"]});
-})();
-</script>
 </body></html>
